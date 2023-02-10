@@ -36,6 +36,32 @@ Le C standardisé ANSI vient avec une bibliothèque de fonctions: des fonctions 
 
 ## Chapitre 1 : tutoriel
 
+> Le chapitre 1 se veut une introduction rapide au langage C sans se perdre trop dans les détails. Le but n'est pas d'être exhaustif mais de mettre la main sur le langage pour rapidement écrire des programmes intéressants. Il se concentre sur les bases: les variables, les constantes, l'arithmétique, le flot de controle, les fonctions et quelques notions d'entrée/sortie. Les concepts nécessaires à l'écriture de programmes plus complexes (pointeurs, structures, la librairie standard, etc.) sont volontairement laissés de côté pour l'instant.
+
+### *Hello World*
+
+Pour écrire ce programme il faut écrire du texte dans un fichier, le compiler avec succès, le charger en mémoire, l'éxecuter et trouver où il a écrit sa sortie. Une fois ces détails techniques maitrisés, le reste vient assez facilement.
+
+~~~C
+#include<stdio.h>
+main(){
+    printf("Hello, world !\n);
+}
+~~~
+
+Pour compiler ce programme, il faut enregistrer le fichier avec l'extension `.c`, le compiler avec le compilateur `cc` (ou `gcc`) pour créer un fichier éxecutable `a.out`. Puis l'éxecuter
+
+~~~
+cc hello.c
+./a.out
+~~~
+
+Un programme C est composé de *fonctions* et de *variables*.
+
+> A l'époque, et notamment lors de la seconde édition du livre en 1988, la programmation orienté objet était déjà bien présente avec Simula (1967), SmallTalk (1972) et C++ (1980). Contrairement à ce que l'on pourrait penser, le C, orienté fonction et variable, de taille modeste, dispose d'un design assez radical par rapport à la plupart des langages de son époque et aux tendances conceptuelles du moment. Il s'inspire davantage de Fortran (1957) et de Pascal(1970, 2 ans avant le C). On peut penser notamment à SmallTalk qui vient avec tout un système d'exploitation, tout un package (intégralement orienté objet comme UNIX est intégralement réécrit en C, à la différence que C, de par sa petite taille, est plus facilement portable). Le C est donc déjà bâti avec un regard critique dans le rétroviseur.
+
+La fonction `main` est spéciale: le programme commence toujours par éxecuter cette fonction. Tout programme C doit avoir une fonction `main`.
+
 # Références
 
-- [The C Programming Language, 2nd edition](), de Brian W.Kernighan et Dennis M.Ritchie, 1988, aux éditions [Prentice Hall](https://fr.wikipedia.org/wiki/Prentice_Hall)
+- [The C Programming Language, 2nd edition](), de Brian W.Kernighan et Dennis M.Ritchie, 1988, aux éditions [Prentice Hall](https://fr.wikipedia.org/wiki/Prentice_Hall) (dont la société mère est l'éditeur [Pearson](https://fr.wikipedia.org/wiki/Pearson_(maison_d%27%C3%A9dition)), qui détient aussi l'éditeur [Addison-Wesley](https://fr.wikipedia.org/wiki/Addison-Wesley), qui a publié, entre autres, *The Art of Computer Programming* de Knuth, *The Feynman lectures and Physics* de Feynman et *The Mythical Man-Month* de Brooks)
