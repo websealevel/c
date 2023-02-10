@@ -2,7 +2,10 @@
 
 int main(int argc, char const *argv[])
 {
-    /* code */
-    printf("hello, world !\n");
-    return 0;
+    /*(pas de padding)*/
+    printf("%s.\n", "hello, world !");
+    /*(padding à droite par défaut)*/
+    printf("%15s.\n", "hello, world !");
+    /*padding à gauche*/
+    printf("%-15s.\n", "hello, world !");
 }
