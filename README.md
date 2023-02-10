@@ -97,6 +97,8 @@ Quelques spécifications de conversion de la fonction printf:
 - `%c`: caractère
 
 
+Le choix entre `for` et `while` est arbitraire: choisir celui qui rend le code *plus clair*. `for` est approprié pour des boucles où les instructions d'*initialisation* et d'*incrémentation* sont *logiquement reliées*. La boucle `for` est plus compacte, car elle garde les instructions de contrôle de la boucle *au même endroit*.  
+
 # Références
 
 - [The C Programming Language, 2nd edition](), de Brian W.Kernighan et Dennis M.Ritchie, 1988, aux éditions [Prentice Hall](https://fr.wikipedia.org/wiki/Prentice_Hall) (dont la société mère est l'éditeur [Pearson](https://fr.wikipedia.org/wiki/Pearson_(maison_d%27%C3%A9dition)), qui détient aussi l'éditeur [Addison-Wesley](https://fr.wikipedia.org/wiki/Addison-Wesley), qui a publié, entre autres, *The Art of Computer Programming* de Knuth, *The Feynman lectures and Physics* de Feynman et *The Mythical Man-Month* de Brooks)
