@@ -85,7 +85,7 @@ En C, la division entière tronque le résultat. Par exemple 5/9, comme 5 et 9 s
 
 >En C, la multiplication à la précédence sur la division.
 
->Dans la première partie sur la conversion Farenheiht-Celsius, les auteurs sont habiles, car ils proposent d'utiliser un pas qui leur permet d'utiliser la division entière dans l'expression `5 * (fahr - 32) / 9` sans fournir de mauvais résultat. En effet, si on passe le pas à 1 par exemple, pour les valeurs 31 et 33 la division sera tronquée et la valeur en Celsius sera égale à 0.
+>Dans la première partie sur la conversion Farenheiht-Celsius, les auteurs sont habiles, car ils proposent d'utiliser un pas qui leur permet d'utiliser la division entière dans l'expression `5 * (fahr - 32) / 9` sans fournir de mauvais résultat. En effet, si on passe le pas à 1 par exemple, pour les valeurs 31 et 33 la division sera tronquée et la valeur en Celsius sera égale à 0 (faux).
 
 Quelques types de base offerts par le C:
 
