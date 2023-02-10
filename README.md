@@ -52,7 +52,7 @@ main(){
 Pour compiler ce programme, il faut enregistrer le fichier avec l'extension `.c`, le compiler avec le compilateur `cc` (ou `gcc`) pour créer un fichier éxecutable `a.out`. Puis l'éxecuter
 
 ~~~
-cc hello.c
+cc -Wall hello.c
 ./a.out
 ~~~
 
@@ -62,6 +62,42 @@ Un programme C est composé de *fonctions* et de *variables*.
 
 La fonction `main` est spéciale: le programme commence toujours par éxecuter cette fonction. Tout programme C doit avoir une fonction `main`.
 
+En C, *toutes les variables doivent être déclarées* avant d'être utilisées. Par convention, on les place au début de la fonction *avant toute instruction*.
+
+En C, la division entière tronque le résultat. Par exemple 5/9, comme 5 et 9 sont des entiers 5/9 sera tronqué à 0.
+
+`printf` est une fonction de la librairie standard (C ne définit aucune fonction d'entrée/sortie)
+
+>En C, la multiplication à la précédence sur la division.
+
+>Dans la première partie sur la converion Farenheiht-Celsius, les auteurs sont habiles car ils proposent d'utiliser un pas qui leur permet d'utiliser la division entière dans l'expression `5 * (fahr - 32) / 9` sans fournir de mauvais résultat. En effet, si on passe le pas à 1 par exemple, pour les valeurs 31 et 33 la division sera tronquée et la valeur en Celsius sera égale à 0.
+
+Quelques types de base offerts par le C:
+
+- `char`: un caractère encodé sur un octet (8 bits, ou 1 *byte* en anglais)
+- `int`: un entier encodé sur 16 bits ou 32 bits (machine dépendant)
+- `short`: un entier *court* (minimum sur 16 bits)
+- `long`: en entier *long* (minimum sur 32 bits)
+- `float` : nombre à virgule, typiquement sur 32bit
+- `double` : double precision nombre à virgule
+
+Si une opération arithmétique a pour opérandes deux entiers, une opération entier à entier est réalisée. Si une opérande est un float et l'autre un entier, *l'entier est converti en float et une opération float à float est réalisée*.
+
+Quelques spécifications de conversion de la fonction printf:
+
+- `%d` : converti un entier en chaine de caractères
+- `%f` : converti un float en chaine de caractères
+- `%3d` : converti un entier sur 3 colonnes
+- `%6.1f` : converti un float sur *au moins* 6 caractères, avec 1 chiffre derrière la virgule
+- `%3.0f`: converti un float sur au moins 3 caractères, avec aucun chiffre derrière la virgule (pas de virgule)
+- `%.4f`: converti un float, avec 4 chiffres derrière la virgule (pas de virgule)
+- `%s`: chaîne de caractères. Par défaut padding à droite.
+- `%10s`: chaîne de caractères sur *au moins* 10 caractères.
+- `%-10s`: chaîne de caractères sur *au moins* 10 caractères, padding à gauche.
+- `%c`: caractère
+
+
 # Références
 
 - [The C Programming Language, 2nd edition](), de Brian W.Kernighan et Dennis M.Ritchie, 1988, aux éditions [Prentice Hall](https://fr.wikipedia.org/wiki/Prentice_Hall) (dont la société mère est l'éditeur [Pearson](https://fr.wikipedia.org/wiki/Pearson_(maison_d%27%C3%A9dition)), qui détient aussi l'éditeur [Addison-Wesley](https://fr.wikipedia.org/wiki/Addison-Wesley), qui a publié, entre autres, *The Art of Computer Programming* de Knuth, *The Feynman lectures and Physics* de Feynman et *The Mythical Man-Month* de Brooks)
+- [C documentation](https://devdocs.io/c/)
