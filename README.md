@@ -1,5 +1,17 @@
 # C
 
+- [C](#c)
+  - [Général](#général)
+  - [Introduction au langage C](#introduction-au-langage-c)
+  - [Chapitre 1 : tutoriel](#chapitre-1--tutoriel)
+    - [*Hello World*](#hello-world)
+    - [Arithmétique](#arithmétique)
+    - [for et while](#for-et-while)
+    - [Constantes symboliques](#constantes-symboliques)
+- [Références](#références)
+
+
+
 ## Général
 
 La première édition du livre *The C Programming language* a été publiée en 1978.
@@ -64,6 +76,8 @@ La fonction `main` est spéciale: le programme commence toujours par éxecuter c
 
 En C, *toutes les variables doivent être déclarées* avant d'être utilisées. Par convention, on les place au début de la fonction *avant toute instruction*.
 
+### Arithmétique
+
 En C, la division entière tronque le résultat. Par exemple 5/9, comme 5 et 9 sont des entiers 5/9 sera tronqué à 0.
 
 `printf` est une fonction de la librairie standard (C ne définit aucune fonction d'entrée/sortie)
@@ -96,8 +110,19 @@ Quelques spécifications de conversion de la fonction printf:
 - `%-10s`: chaîne de caractères sur *au moins* 10 caractères, padding à gauche.
 - `%c`: caractère
 
+### for et while
 
 Le choix entre `for` et `while` est arbitraire: choisir celui qui rend le code *plus clair*. `for` est approprié pour des boucles où les instructions d'*initialisation* et d'*incrémentation* sont *logiquement reliées*. La boucle `for` est plus compacte, car elle garde les instructions de contrôle de la boucle *au même endroit*.  
+
+### Constantes symboliques
+
+Les *nombres magiques* dans un programme sont mauvais car ils ne fournissent aucune information évidente à une personne qui voudrait lire le programme plus tard, et ils sont difficiles à trouver de manière systématique. Une façon de gérer ces nombres, c'est de leur donner un nom avec un sens. Une ligne qui débute par `#define` définit *un nom symbolique* ou *une constante symbolique* comme une chaîne de caractères particulière (le nom symbolique est remplacé par la chaine de caractère durant la phase de *préprocessing*)
+
+~~~C
+#define nom texte de remplacement
+~~~
+
+Par convention, les constantes symboliques sont écrites en MAJUSCULES pour ne pas les confondre avec les variables définies dans le programme. Le nom de la constante symbolique doit commencer par une lettre. Le texte de remplacement peut être *n'importe quelle chaine de caractères*.
 
 # Références
 
