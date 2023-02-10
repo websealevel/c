@@ -11,6 +11,8 @@
 - [Références](#références)
 
 
+> Ce dépôt contient un travail de lecture, de synthèse et d'annotation du livre [The C Programming Language, 2nd edition](https://www.oreilly.com/library/view/c-programming-language/9780133086249/) (ou livre K&R), de Brian W.Kernighan et Dennis M.Ritchie, publié en 1988. Tous les exercices proposés sont réalisés et documentés sous la forme de code source pour chaque chapitre.
+
 
 ## Général
 
